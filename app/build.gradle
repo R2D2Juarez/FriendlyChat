@@ -25,7 +25,14 @@ android {
     }
 }
 
+//Facebook
+    repositories{
+        mavenCentral()
+    }
+
+
 dependencies {
+
     testCompile 'junit:junit:4.12'
 
     compile 'com.android.support:design:25.3.1'
@@ -35,6 +42,7 @@ dependencies {
 
     // Google
     compile 'com.google.android.gms:play-services-auth:10.2.1'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
 
     // Firebase
     compile 'com.google.firebase:firebase-analytics:10.2.1'

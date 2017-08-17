@@ -415,7 +415,7 @@ public class MainActivity extends AppCompatActivity
                         // Make the fetched config available via
                         // FirebaseRemoteConfig get<type> calls.
                         mFirebaseRemoteConfig.activateFetched();
-                        applyRetrievedLengthLimit();
+                        //applyRetrievedLengthLimit();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -424,7 +424,7 @@ public class MainActivity extends AppCompatActivity
                         // There has been an error fetching the config
                         Log.w(TAG, "Error fetching config: " +
                                 e.getMessage());
-                        applyRetrievedLengthLimit();
+                        //applyRetrievedLengthLimit();
                     }
                 });
     }
@@ -434,14 +434,14 @@ public class MainActivity extends AppCompatActivity
      * Apply retrieved length limit to edit text field.
      * This result may be fresh from the server or it may be from cached
      * values.
-     */
+
     private void applyRetrievedLengthLimit() {
         Long friendly_msg_length =
                 mFirebaseRemoteConfig.getLong("friendly_msg_length");
         mMessageEditText.setFilters(new InputFilter[]{new
                 InputFilter.LengthFilter(friendly_msg_length.intValue())});
         Log.d(TAG, "FML is: " + friendly_msg_length);
-    }
+    }*/
 
     private Action getMessageViewAction(FriendlyMessage friendlyMessage) {
         return new Action.Builder(Action.Builder.VIEW_ACTION)
